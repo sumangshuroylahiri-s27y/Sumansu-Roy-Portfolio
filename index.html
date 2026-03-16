@@ -65,7 +65,7 @@
                 <div class="flex-shrink-0">
                     <a href="#home" class="flex items-center gap-3 group">
                         <!-- Logo Image -->
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Sumansu Roy Logo" class="w-10 h-10 rounded-full object-cover object-top border-2 border-navy group-hover:border-accent transition-colors shadow-sm cursor-pointer profile-img-clickable" title="Click to upload your image" id="nav-logo">
+                        <img src="profile.jpg" alt="Sumansu Roy Logo" class="w-10 h-10 rounded-full object-cover object-top border-2 border-navy group-hover:border-accent transition-colors shadow-sm" id="nav-logo">
                         <span class="text-xl font-bold text-navy group-hover:text-accent transition-colors tracking-tight">Sumansu Roy</span>
                     </a>
                 </div>
@@ -116,11 +116,8 @@
                     <!-- Soft background shape -->
                     <div class="absolute inset-0 bg-gray-100 rounded-3xl transform translate-x-4 translate-y-4"></div>
                     <!-- Main Hero Image -->
-                    <div class="relative z-10 rounded-3xl w-full h-full group cursor-pointer profile-img-clickable" title="Click to upload your image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Sumansu Roy" class="rounded-3xl w-full h-full object-cover object-top border-4 border-white shadow-2xl transition-opacity group-hover:opacity-80" id="hero-image">
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-3xl">
-                            <span class="bg-navy/80 text-white px-4 py-2 rounded-lg text-sm font-medium"><i class="fas fa-camera mr-2"></i>Upload Photo</span>
-                        </div>
+                    <div class="relative z-10 rounded-3xl w-full h-full group">
+                        <img src="profile.jpg" alt="Sumansu Roy" class="rounded-3xl w-full h-full object-cover object-top border-4 border-white shadow-2xl transition-opacity" id="hero-image">
                     </div>
                 </div>
             </div>
@@ -136,11 +133,8 @@
             </div>
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 flex flex-col md:flex-row gap-10 items-center">
                 <div class="md:w-1/3 flex justify-center animate-float-slow">
-                    <div class="relative group cursor-pointer profile-img-clickable" title="Click to upload your image">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Sumansu Roy Profile" class="w-64 h-80 rounded-2xl object-cover object-top shadow-md border-4 border-white transition-opacity group-hover:opacity-80" id="about-image">
-                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                            <span class="bg-navy/80 text-white px-3 py-1.5 rounded-lg text-xs font-medium"><i class="fas fa-camera mr-1"></i>Upload</span>
-                        </div>
+                    <div class="relative group">
+                        <img src="profile.jpg" alt="Sumansu Roy Profile" class="w-64 h-80 rounded-2xl object-cover object-top shadow-md border-4 border-white transition-opacity" id="about-image">
                     </div>
                 </div>
                 <div class="md:w-2/3 text-lg text-gray-600 leading-relaxed space-y-5 animate-float-delayed">
@@ -388,9 +382,6 @@
             </p>
         </div>
     </footer>
-
-    <!-- Hidden File Input for Image Upload -->
-    <input type="file" id="image-upload" accept="image/*" class="hidden">
 
     <!-- Custom Script -->
     <script src="script.js"></script>

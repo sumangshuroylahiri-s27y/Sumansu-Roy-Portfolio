@@ -118,29 +118,4 @@ document.addEventListener('DOMContentLoaded', () => {
             formStatus.classList.add('hidden');
         }, 5000);
     }
-
-    // Interactive Image Upload for Preview
-    const imageUpload = document.getElementById('image-upload');
-    const clickableImages = document.querySelectorAll('.profile-img-clickable');
-    const navLogo = document.getElementById('nav-logo');
-    const heroImage = document.getElementById('hero-image');
-    const aboutImage = document.getElementById('about-image');
-
-    if (imageUpload) {
-        clickableImages.forEach(container => {
-            container.addEventListener('click', () => {
-                imageUpload.click();
-            });
-        });
-
-        imageUpload.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const imageUrl = URL.createObjectURL(file);
-                if (navLogo) navLogo.src = imageUrl;
-                if (heroImage) heroImage.src = imageUrl;
-                if (aboutImage) aboutImage.src = imageUrl;
-            }
-        });
-    }
 });
