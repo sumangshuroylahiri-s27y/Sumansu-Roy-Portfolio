@@ -14,14 +14,7 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            // Replace with your actual EmailJS Public Key
-            emailjs.init("YOUR_PUBLIC_KEY"); 
-        })();
-    </script>
+    
     
     <!-- Tailwind Configuration -->
     <script>
@@ -384,6 +377,60 @@
     </footer>
 
     <!-- Custom Script -->
-    <script src="script.js"></script>
+    ```html
+<script>
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+
+    // WhatsApp Contact Form
+    const contactForm = document.getElementById("contact-form");
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        // Get Form Values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const service = document.getElementById("service").value;
+        const message = document.getElementById("message").value;
+
+        // WhatsApp Message
+        const text = `
+🔥 New Client Inquiry
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+📞 Phone: ${phone}
+
+🛠 Service: ${service}
+
+💬 Message:
+${message}
+        `;
+
+        // Your WhatsApp Number
+        const whatsappLink =
+            `https://wa.me/919800287516?text=${encodeURIComponent(text)}`;
+
+        // Open WhatsApp
+        window.open(whatsappLink, "_blank");
+
+        // Reset Form
+        contactForm.reset();
+
+    });
+
+</script>
+```
 </body>
 </html>
